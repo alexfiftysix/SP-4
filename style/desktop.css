@@ -9,3 +9,12 @@ html, body{
 	font-family: Helvetica;
 }
 
+body{
+    display: grid;
+    background-image: url('../images/ben.jpg');
+    background-size: cover;
+}
+
+header{
+    
+}
