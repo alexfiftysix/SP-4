@@ -1,0 +1,97 @@
+*{
+	box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+	font-family: Helvetica;
+	margin: 0;
+	color: white;
+	background-color: #252525;
+}
+
+section{
+	border-bottom: 5px solid black;
+	background-color: red;
+	height: 100%;
+}
+
+header{
+	display: grid;
+	grid-template-areas: "header"
+						 "link";
+	background-color: #151515;
+	box-shadow: 0 0 25px black;
+}
+
+h1, li{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+header a{
+	color: white;
+	text-decoration: none;
+}
+
+header a:visited{
+	color: white;
+}
+
+h1{
+	margin: 10px 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	border-bottom: 1px solid white;
+}
+
+ul{
+	list-style: none;
+	grid-row: link;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+section:nth-of-type(1){
+	background: url("../images/ben.jpg")  no-repeat center center fixed;
+	background-size: cover;
+}
+
+section:nth-of-type(2){
+	background: url("../images/alex.jpg")  no-repeat center center fixed;
+	background-size: cover;
+}
+
+section:nth-of-type(3){
+	background: url("../images/marcus.jpg")  no-repeat center center fixed;
+	background-size: cover;
+}
+
+section:nth-of-type(4){
+	background: url("../images/jon.jpg")  no-repeat center center fixed;
+	background-size: cover;
+}
+
+.spaceFiller{
+	height: 40%;
+}
+
+article{
+	width: 80%;
+	margin: auto;
+	background-color: #fafafa;
+	border-radius: 5px;
+	box-shadow: 0 0 25px black;
+	padding: 5%;
+}
+
+article p{
+	margin: 0;
+	margin-bottom: 1em;
+	color: black;
+
+}
