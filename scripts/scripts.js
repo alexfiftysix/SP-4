@@ -22,7 +22,7 @@ $(document).ready(function(){
 			currentBackground = 0
 		}
 	}
-	setInterval(NextImage, 500);
+	setInterval(NextImage, 2000);
 	// end of my slideshow code
 
 	$("img:first-of-type").click(NextImage);	
