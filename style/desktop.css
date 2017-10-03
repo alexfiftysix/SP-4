@@ -11,7 +11,7 @@ html, body{
 
 body{
     background-color: #1e1e1e;
-    background-image: url('../images/ben.jpg');
+    /*background-image: url('../images/ben.jpg');*/
     background-size: cover;
     background-position: center;
 
@@ -19,20 +19,57 @@ body{
     grid-template-rows: 150px 3fr 2fr; 
     grid-template-columns: repeat(3, 1fr);
 
+    z-index: -3;
+}
+
+img{
+    grid-row: 1/4;
+    grid-column: 1/4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
     z-index: -2;
 }
 
-#image2{
-    grid-column: 1/4;
-    grid-row: 1/4;
-
-    background-image: url('../images/alex.jpg');
-    background-size: cover;
-    background-position: center;
-    
+#img2{
     display: none;
     z-index: -1;
 }
+
+.preload{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-top: 10000%;
+}
+
+#secondImage{
+    grid-row: 1/4;
+    grid-column: 1;
+
+    background-color: #1e1e1e;
+    background-image: url('../images/alex.jpg');
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    z-index: -2;
+}
+
+#filter{
+    grid-row: 1/4;
+    grid-column: 1/4;
+
+    background-image: url('../images/diamond.png');
+    background-size: 5px 5px;
+    background-repeat: repeat;
+
+    opacity: .2;
+
+    z-index: -1;
+}
+
 
 header, article, .triangle, .contact, footer{
     box-shadow: 0 0 25px black;
@@ -82,7 +119,7 @@ header a{
 }
 
 header a:hover{
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 15px white;
 }
 
 .triangle{
@@ -115,8 +152,10 @@ article{
     color: white;
     float: right;
 
-    margin-bottom: 55px;
+    margin-bottom: 4em;
     padding: 25px;
+
+    border-radius: 10px;
 }
 
 article p{
@@ -147,7 +186,7 @@ article p{
 }
 
 .logos img:hover{
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 25px white;
 }
 
 footer{

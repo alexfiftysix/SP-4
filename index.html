@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <!-- <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.waitforimages.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style/desktop.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
-    <div id="image2"></div>
     <header id="pageTop">
         <h1>Street Pieces</h1>
         <ul>
@@ -19,6 +19,18 @@
             <li><a href='#contact'>Contact</a></li>
         </ul>
     </header>
+
+    <img id='img1' src="images/ben.jpg">
+    <img id='img2' src="images/marcus.jpg">
+
+    <img class='preload' src="images/ben.jpg">
+    <img class='preload' src="images/alex.jpg">
+    <img class='preload' src="images/marcus.jpg">
+    <img class='preload' src="images/jon.jpg">
+    <img class='preload' src="images/group.jpg">
+
+    <!-- <section id='secondImage'></section> -->
+    <!-- <section id="filter"></section> -->
 
     <div class="triangle"></div>
 
@@ -44,6 +56,7 @@
         <p>email: streetpieces@gmail.com</p>
         <p>phone: 0402 684 288</p>
     </footer>
+
+    <script type="text/javascript" src="scripts/slideshow4.js"></script>
 </body>
-    <script type="text/javascript" src="scripts/slideshow2.js"></script>
 </html>
