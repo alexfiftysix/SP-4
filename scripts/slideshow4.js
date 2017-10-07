@@ -1,13 +1,14 @@
 // Slideshow4 uses the img tags instead of the background-image property
-$(document).ready( function(){
+$(window).on('load', function(){
 	console.log("jQuery loaded");
 	$('#img2').hide();
 	
+	// Variables which affect page experience
+	var imgDelay = 5000;
+
 
 	var images=["images/ben.jpg", "images/alex.jpg", "images/marcus.jpg", "images/jon.jpg", "images/band.jpg"]
-	console.log(images.length);
 	var nextImg = 1;
-	var imgDelay = 3000;
 
 	// slideshow start
 	function NextImage(){
@@ -15,6 +16,7 @@ $(document).ready( function(){
 		$('#img2').attr("src", images[nextImg]);
 		$('#img2').fadeIn(imgDelay / 3);
 
+		console.log(nextImg);
 		setTimeout(function(){
 			$('#img1').attr("src", images[nextImg]);
 
@@ -22,7 +24,6 @@ $(document).ready( function(){
 			if (nextImg == images.length){
 				nextImg = 0;
 			}
-			console.log(nextImg);
 		}, imgDelay/3);
 	}
 

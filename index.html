@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SP | 4 | home</title>
+    <title>SP | 5 | home</title>
     <meta charset="utf-8">
     <!-- <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.waitforimages.min.js"></script>
+    <!-- <script type="text/javascript" src="scripts/jquery.waitforimages.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="style/desktop.css">
+    <!-- Imaginary breakpoint - under 1000px -->
+
+
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
+
 <body>
     <header id="pageTop">
-        <h1>Street Pieces</h1>
-        <ul>
-            <li><a href='#pageTop'>Home</a></li>
-            <li><a href='#gigs'>Gigs</a></li>
-            <li><a href='#store'>Store</a></li>
-            <li><a href='#contact'>Contact</a></li>
-        </ul>
+        <div id="headWrap">
+            <h1>Street Pieces</h1>
+            <ul>
+                <li><a href='#pageTop'>Home</a></li>
+                <li><a href='#gigs'>Gigs</a></li>
+                <li><a href='#store'>Store</a></li>
+                <li><a class="contactButton">Contact</a></li>
+            </ul>
+        </div>
+        <div class='triangle'></div>
     </header>
 
     <img id='img1' src="images/ben.jpg">
     <img id='img2' src="images/marcus.jpg">
 
-    <img class='preload' src="images/ben.jpg">
-    <img class='preload' src="images/alex.jpg">
-    <img class='preload' src="images/marcus.jpg">
-    <img class='preload' src="images/jon.jpg">
-    <img class='preload' src="images/group.jpg">
-
-    <!-- <section id='secondImage'></section> -->
-    <!-- <section id="filter"></section> -->
-
-    <div class="triangle"></div>
 
     <div id='articleWrapper'>
         <article>
@@ -56,7 +53,23 @@
         <p>email: streetpieces@gmail.com</p>
         <p>phone: 0402 684 288</p>
     </footer>
+    
+
+    <section id="contactModal">
+        <article>
+            <img src="images/close.png">
+            <p>Email: streetpieces@gmail.com</p>
+            <p>Phone: 0402 684 288</p>
+        </article>
+    </section>
+
+    <img class='preload' src="images/ben.jpg">
+    <img class='preload' src="images/alex.jpg">
+    <img class='preload' src="images/marcus.jpg">
+    <img class='preload' src="images/jon.jpg">
+    <img class='preload' src="images/band.jpg">
 
     <script type="text/javascript" src="scripts/slideshow4.js"></script>
+    <script type="text/javascript" src="scripts/modal.js"></script>
 </body>
 </html>
