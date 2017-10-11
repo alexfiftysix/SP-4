@@ -12,7 +12,7 @@ $(window).on('load', function () {
 
     // slideshow start
     function NextImage() {
-        img2 = $('#img2');
+        var img2 = $('#img2');
         img2.hide();
         img2.attr("src", images[nextImg]);
         img2.fadeIn(imgDelay / 3);
