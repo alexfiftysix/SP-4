@@ -1,29 +1,33 @@
-$(document).ready(function(){
-	console.log("ready");
+// Slideshow4 uses the img tags instead of the background-image property
+$(window).on('load', function () {
+    console.log("jQuery loaded");
+    $('#img2').hide();
 
-	$.fn.preload = function() {
-	    this.each(function(){
-	        $('<img/>')[0].src = this;
-	    });
-	}
-
-	var loadImages=["url('../images/ben.jpg')", "url('../images/alex.jpg')", "url('../images/marcus.jpg')", "url('../images/jon.jpg')", "url('../images/band.jpg')"]
-	var images=["url('images/ben.jpg')", "url('images/alex.jpg')", "url('images/marcus.jpg')", "url('images/jon.jpg')", "url('images/band.jpg')"]
-	var currentBackground = 0;
-
-	$([loadImages[0],loadImages[1],loadImages[2],loadImages[3], loadImages[4]]).preload();
+    // Variables which affect page experience
+    var imgDelay = 5000;
 
 
-	// my slideshow code
-	function NextImage(){
-		$("body").css("background-image", images[currentBackground]);
-		currentBackground ++;
-		if (currentBackground == 5){
-			currentBackground = 0
-		}
-	}
-	setInterval(NextImage, 500);
-	// end of my slideshow code
+    var images = ["images/ben.jpg", "images/alex.jpg", "images/marcus.jpg", "images/jon.jpg", "images/band.jpg"];
+    var nextImg = 1;
 
-	$("img:first-of-type").click(NextImage);	
-})
+    // slideshow start
+    function NextImage() {
+        img2 = $('#img2');
+        img2.hide();
+        img2.attr("src", images[nextImg]);
+        img2.fadeIn(imgDelay / 3);
+
+        console.log(nextImg);
+        setTimeout(function () {
+            $('#img1').attr("src", images[nextImg]);
+
+            nextImg++;
+            if (nextImg === images.length) {
+                nextImg = 0;
+            }
+        }, imgDelay / 3);
+    }
+
+    setInterval(NextImage, imgDelay);
+    // slideshow end
+});

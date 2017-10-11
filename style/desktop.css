@@ -1,27 +1,27 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-html, body{
+html, body {
     height: 100%;
     width: 100%;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
 }
 
-body{
+body {
     background-color: #1e1e1e;
     background-size: cover;
     background-position: center;
 
     display: grid;
-    grid-template-rows: 150px 3fr 2fr; 
+    grid-template-rows: 150px 3fr 2fr;
     grid-template-columns: repeat(3, 1fr);
 
     z-index: -3;
 }
 
-#img1{
+#img1 {
     grid-row: 1/4;
     grid-column: 1/4;
     width: 100%;
@@ -31,7 +31,7 @@ body{
     z-index: -3;
 }
 
-#img2{
+#img2 {
     display: none;
     grid-row: 1/4;
     grid-column: 1/4;
@@ -42,25 +42,25 @@ body{
     z-index: -2;
 }
 
-.preload{
+.preload {
     height: 100%;
     width: 100%;
     position: fixed;
     margin-top: 10000%;
 }
 
-#headWrap, article, .triangle, .contact, footer{
+#headWrap, article, .triangle, .contact, footer {
     box-shadow: 0 0 25px black;
 }
 
-header{
+header {
     grid-row: 1;
     grid-column: 1/3;
 
     display: flex;
 }
 
-#headWrap{
+#headWrap {
     background-color: black;
 
     display: flex;
@@ -68,13 +68,13 @@ header{
     justify-content: space-between;
 }
 
-h1{
+h1 {
     color: white;
     grid-row: 1;
     grid-column: 1/5;
 
     font-size: 4em;
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro', sans-serif;
     text-transform: uppercase;
 
     margin-left: 25px;
@@ -83,29 +83,29 @@ h1{
     text-shadow: 0 0 5px white;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-header a:hover{
+header a:hover {
     text-shadow: 0 0 25px white;
 }
 
-ul{
+ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-li{
+li {
     margin-right: 10%;
     margin-bottom: 10px;
     list-style: none;
 }
 
-.triangle{
+.triangle {
     width: 0;
     height: 0;
     border-left: 120px solid transparent;
@@ -119,7 +119,7 @@ li{
     z-index: -1;
 }
 
-#articleWrapper{
+#articleWrapper {
     grid-column: 2;
     grid-row: 2/4;
 
@@ -127,7 +127,7 @@ li{
     align-items: flex-end;
 }
 
-article{
+article {
     background-color: black;
     color: white;
     float: right;
@@ -138,12 +138,12 @@ article{
     border-radius: 10px;
 }
 
-article p{
+article p {
     font-size: 1em;
     margin-bottom: 1em;
 }
 
-.logos{
+.logos {
     grid-row: 1;
     grid-column: 3;
     display: flex;
@@ -151,7 +151,7 @@ article p{
     padding: 25px;
 }
 
-.logos img{
+.logos img {
     height: 100%;
     width: 100%;
 
@@ -159,17 +159,17 @@ article p{
     border-radius: 50%;
 }
 
-.logos a{
+.logos a {
     margin-right: 35px;
     height: 48px;
     width: 48px;
 }
 
-.logos img:hover{
+.logos img:hover {
     box-shadow: 0 0 25px white;
 }
 
-footer{
+footer {
     position: fixed;
     bottom: 0;
     color: white;
@@ -183,42 +183,56 @@ footer{
     justify-content: space-around;
 }
 
-#contactModal{
+#contactModal {
     position: fixed;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    
+
     display: none;
 
-    grid-template-areas:    "x x x "
-                            "y modal z"
-                            "a a a";
+    grid-template-areas: "x x x " "y modal z" "a a a";
 }
 
-#contactModal article{
-    
+#contactModal article {
+
     grid-area: modal;
 
     text-align: right;
 }
 
-#contactModal article p{
+#contactModal article p {
     margin-top: 2em;
 
     font-size: 1em;
     text-align: center;
 }
 
-.contactButton{
+.contactButton {
     cursor: pointer;
 }
 
-#contactModal article img{
+#contactModal article img {
     height: 32px;
     width: 32px;
 
     cursor: pointer;
+}
 
-    /*text-align: right;*/
+/* TODO: make this shit work*/
+@media (max-width: 1000px) {
+    #articleWrapper {
+        grid-column: 1/4;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        color: blue;
+    }
+
+    header {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
 }
