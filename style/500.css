@@ -1,0 +1,57 @@
+body {
+    grid-template-rows: 150px 100px 3fr 2fr;
+}
+
+.triangle {
+    display: none;
+}
+
+header {
+    grid-column: 1/5;
+}
+
+#headWrap {
+    padding: 20px;
+    padding-top: 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.logos {
+    grid-row: 2;
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logos a {
+    margin: 0;
+}
+
+#articleWrapper {
+    grid-column: 1/4;
+    grid-row: 3/5;
+}
+
+#img1 {
+    grid-column: 1/5;
+    grid-row: 2/5;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: .5em 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0 50px;
+}
+
+li {
+    margin: 0;
+}

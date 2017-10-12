@@ -1,0 +1,10 @@
+#articleWrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}

@@ -10,15 +10,13 @@ html, body {
 }
 
 body {
-    background-color: #1e1e1e;
-    background-size: cover;
-    background-position: center;
-
     display: grid;
     grid-template-rows: 150px 3fr 2fr;
     grid-template-columns: repeat(3, 1fr);
 
     z-index: -3;
+
+    background-image: none;
 }
 
 #img1 {
@@ -222,7 +220,6 @@ footer {
 
     header {
         grid-column: 1/5;
-        /*padding-top: 0;*/
     }
 
     #headWrap {
@@ -270,11 +267,9 @@ footer {
     li {
         margin: 0;
     }
-
 }
 
 @media (max-width: 500px) {
-
     h1 {
         text-align: center;
     }
@@ -284,18 +279,3 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
-
-    h1 {
-        font-size: 2.5em;
-    }
-
-    ul {
-        margin: 0;
-    }
-
-    footer {
-        flex-direction: column;
-        height: 4em;
-    }
-}
