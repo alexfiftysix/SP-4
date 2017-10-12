@@ -77,7 +77,7 @@ h1 {
     font-family: 'Source Sans Pro', sans-serif;
     text-transform: uppercase;
 
-    margin-left: 25px;
+    /*margin-left: 25px;*/
     margin-top: 15px;
 
     text-shadow: 0 0 5px white;
@@ -106,17 +106,7 @@ li {
 }
 
 .triangle {
-    width: 0;
-    height: 0;
-    border-left: 120px solid transparent;
-    border-right: 120px solid transparent;
-    border-bottom: 120px solid black;
-    transform: rotate(315deg);
-
-    margin-left: -78px;
-    margin-top: -37px;
-
-    z-index: -1;
+    display: inline;
 }
 
 #articleWrapper {
@@ -182,6 +172,7 @@ footer {
 
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
 }
 
 #contactModal {
@@ -220,8 +211,7 @@ footer {
     cursor: pointer;
 }
 
-/* TODO: make this shit work*/
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
     body {
         grid-template-rows: 150px 100px 3fr 2fr;
     }
@@ -243,7 +233,6 @@ footer {
 
     h1 {
         margin: 0;
-        text-align: center;
     }
 
     .logos {
@@ -284,31 +273,30 @@ footer {
 
 }
 
-@media (max-width: 500px) {
+/*@media (max-width: 500px) {*/
 
-    h1 {
-        font-size: 3em;
+/*h1 {*/
+/*font-size: 3em;*/
 
-    }
+/*}*/
 
-    body {
-        grid-template-rows: 1fr 100px 3fr 2fr;
-    }
+/*body {*/
+/*grid-template-rows: 1fr 100px 3fr 2fr;*/
+/*}*/
+/*}*/
 
-}
+/*@media (max-width: 400px) {*/
 
-@media (max-width: 400px) {
+/*h1 {*/
+/*font-size: 2.5em;*/
+/*}*/
 
-    h1 {
-        font-size: 2.5em;
-    }
+/*ul {*/
+/*margin: 0;*/
+/*}*/
 
-    ul {
-        margin: 0;
-    }
-
-    footer {
-        flex-direction: column;
-        height: 4em;
-    }
-}
+/*footer {*/
+/*flex-direction: column;*/
+/*height: 4em;*/
+/*}*/
+/*}*/
