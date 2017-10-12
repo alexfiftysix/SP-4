@@ -60,6 +60,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 h1 {
@@ -91,7 +92,8 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 10px;
+    margin: 0;
+    width: auto;
 }
 
 li {
@@ -107,19 +109,10 @@ li {
 #articleWrapper {
     grid-column: 2;
     grid-row: 2/4;
-
 }
 
 article {
-    /*background-color: black;*/
-    color: white;
-    float: right;
-    text-shadow: #151515;
-
     margin: 0 -50px 4em -50px;
-    padding: 25px;
-
-    border-radius: 10px;
 }
 
 article p {
@@ -154,46 +147,6 @@ article p {
     box-shadow: 0 0 25px white;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    color: white;
-    width: 100%;
-    background-color: black;
-    height: 2em;
-    text-align: center;
-    padding: .5em 30% .5em 30%;
-
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-#contactModal {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    display: none;
-
-    grid-template-areas: "x x x " "y modal z" "a a a";
-}
-
-#contactModal article {
-
-    grid-area: modal;
-
-    text-align: right;
-}
-
-#contactModal article p {
-    margin-top: 2em;
-
-    font-size: 1em;
-    text-align: center;
-}
-
 .contactButton {
     cursor: pointer;
 }
@@ -205,6 +158,14 @@ footer {
     cursor: pointer;
 }
 
-.fakeFooter{
+.fakeFooter {
     display: none;
+}
+
+footer {
+    padding: 0.5em 15em;
+}
+
+#storeWrapper{
+    width: 600px;
 }

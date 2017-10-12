@@ -11,9 +11,7 @@ header {
 }
 
 #headWrap {
-    padding: 20px;
-    padding-top: 0;
-    width: 100%;
+    padding: 0 20px 20px 20px;
 }
 
 h1 {
@@ -41,9 +39,8 @@ h1 {
 }
 
 footer {
-    display: flex;
-    justify-content: space-around;
-    padding: .5em 0;
+    height: 2em;
+    flex-direction: row;
 }
 
 ul {
@@ -53,4 +50,8 @@ ul {
 
 li {
     margin: 0;
+}
+
+#storeWrapper{
+    max-width: 600px;
 }

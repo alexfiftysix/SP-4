@@ -1,9 +1,10 @@
-$(document).ready(function(){
-	$(".contactButton").click(function(){
-		$("#contactModal").css('display', 'grid');
-	})
+$(document).ready(function () {
+    var modal = $('#contactModal');
+    $(".contactButton").click(function () {
+        modal.css('display', 'flex');
+    });
 
-	$("#contactModal article img").click(function(){
-		$("#contactModal").hide();
-	})
-})
+    $("#contactModal article img").click(function () {
+        modal.hide();
+    });
+});
