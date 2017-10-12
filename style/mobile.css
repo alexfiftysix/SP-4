@@ -26,15 +26,17 @@ body {
     align-items: center;
 }
 
-.preload {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    margin-top: 10000%;
-}
-
 #headWrap, .triangle, .contact, footer {
     box-shadow: 0 0 25px black;
+}
+
+#headWrap {
+    background-color: black;
+    justify-content: space-around;
+    padding: 0 20px 5px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -109,20 +111,20 @@ article {
 
     padding: 0 25px;
     border-radius: 10px;
+    margin-top: 150px;
 
-    /*text-align: justify;*/
+    max-width: 40em;
 }
 
 article p {
     font-size: 1em;
     margin-bottom: 1em;
-}
-
-.mainContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
+    /*text-shadow: 1px 1px 0 black;*/
+    /*display: inline;*/
+    /*background: white;*/
+    /*color: black;*/
+    /*padding: 0 5px;*/
+    /*margin-top: 50px;*/
 }
 
 .logos {
@@ -130,20 +132,8 @@ article p {
     display: flex;
     justify-content: space-around;
 
-    margin-bottom: 4.5em;
-
     width: 100%;
     max-width: 400px;
-}
-
-article p{
-    /*text-shadow: 1px 1px 0 black;*/
-    /*display: inline;*/
-    background: white;
-    color: black;
-    padding: 0 5px;
-    margin-top: 50px;
-    position: relative;
 }
 
 .logos img {
@@ -162,6 +152,13 @@ article p{
     height: 48px;
     width: 48px;
     margin: 0;
+}
+
+.fakeFooter {
+    min-height: 4em;
+    width: 1px;
+    display: block;
+    box-sizing: border-box;
 }
 
 footer {
@@ -211,9 +208,11 @@ footer {
     object-fit: cover;
 
     z-index: -3;
-    display: none;
     grid-column: 1/5;
     grid-row: 2/5;
+
+    position: fixed;
+    display: none;
 }
 
 #img2 {
@@ -222,18 +221,10 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
     z-index: -2;
-    display: none;
-}
 
-#headWrap {
-    background-color: black;
-    justify-content: space-around;
-    padding: 0 20px 5px 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    position: fixed;
+    display: none;
 }
 
 #articleWrapper {

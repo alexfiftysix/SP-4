@@ -1,13 +1,17 @@
 // Slideshow4 uses the img tags instead of the background-image property
 $(window).on('load', function () {
-    if (screen.width > 1080) {
+    if ($(window).width() > 1079) {
+
 
         $('#img1').show();
         $('#img2').hide();
+        $('body').css('background-image', 'none');
 
         // Variables which affect page experience
-        var imgDelay = 5000;
+        var imgDelay = 7000;
         var images = ["images/ben.jpg", "images/alex.jpg", "images/marcus.jpg", "images/jon.jpg", "images/band.jpg"];
+
+        var fadeTime = imgDelay/2;
 
         var nextImg = 1;
 
@@ -17,7 +21,7 @@ $(window).on('load', function () {
             img2.hide();
             img2.attr("src", images[nextImg]);
 
-            img2.fadeIn(imgDelay / 3);
+            img2.fadeIn(fadeTime);
             // console.log(nextImg);
             setTimeout(function () {
                 $('#img1').attr("src", images[nextImg]);
@@ -26,7 +30,7 @@ $(window).on('load', function () {
                 if (nextImg === images.length) {
                     nextImg = 0;
                 }
-            }, imgDelay / 3);
+            }, fadeTime);
 
         }
 

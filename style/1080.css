@@ -130,10 +130,10 @@ article p {
 .logos {
     grid-row: 1;
     grid-column: 3;
-    display: flex;
     justify-content: flex-end;
+    /*align-items: flex-start;*/
     padding: 25px;
-    margin: 25px;
+    max-width: none;
 }
 
 .logos img {
@@ -145,7 +145,7 @@ article p {
 }
 
 .logos a {
-    margin-right: 35px;
+    margin: 0 15px;
     height: 48px;
     width: 48px;
 }
@@ -203,4 +203,8 @@ footer {
     width: 32px;
 
     cursor: pointer;
+}
+
+.fakeFooter{
+    display: none;
 }
