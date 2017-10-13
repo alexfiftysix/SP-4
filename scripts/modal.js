@@ -5,6 +5,6 @@ $(document).ready(function () {
     });
 
     $("#contactModal article img").click(function () {
-        modal.hide();
+        modal.fadeOut();
     });
 });
