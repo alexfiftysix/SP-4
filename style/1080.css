@@ -10,48 +10,46 @@ html, body {
 }
 
 body {
-    display: grid;
-    grid-template-rows: 150px 3fr 2fr;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     z-index: -3;
 }
 
-#img1 {
-    grid-row: 1/4;
-    grid-column: 1/4;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/*#img1 {*/
+/*grid-row: 1/4;*/
+/*grid-column: 1/4;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*object-fit: cover;*/
 
-    z-index: -3;
-}
+/*z-index: -3;*/
+/*}*/
 
-#img2 {
-    display: none;
-    grid-row: 1/4;
-    grid-column: 1/4;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/*#img2 {*/
+/*display: none;*/
+/*grid-row: 1/4;*/
+/*grid-column: 1/4;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*object-fit: cover;*/
 
-    z-index: -2;
-}
-
-.preload {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    margin-top: 10000%;
-}
+/*z-index: -2;*/
+/*}*/
 
 #headWrap, .triangle, .contact, footer {
     box-shadow: 0 0 25px black;
 }
 
 header {
-    width: 40em;
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: none;
+    box-shadow: none;
 }
 
 #headWrap {
@@ -61,6 +59,9 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
+
+    min-width: 30em;
+    width: 30em;
 }
 
 h1 {
@@ -167,6 +168,8 @@ footer {
 }
 
 #storeWrapper{
-    width: 600px;
-    /*justify-content: flex-end;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
 }
