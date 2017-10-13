@@ -53,5 +53,11 @@ li {
 }
 
 #storeWrapper{
-    max-width: 600px;
+    max-width: 400px;
+    padding-bottom: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
 }
