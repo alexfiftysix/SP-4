@@ -24,3 +24,7 @@ header {
 #storeWrapper{
     max-width: 600px;
 }
+
+article{
+    margin-top: 150px;
+}

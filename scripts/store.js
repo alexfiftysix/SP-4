@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var img = $("#storeWrapper a img");
+    var img = $('#storeWrapper').find('a').find('img');
     var thisImage = null;
     img.mouseenter(function(){
 
